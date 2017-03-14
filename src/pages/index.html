@@ -90,7 +90,7 @@ Get out of my source code!
         </div>
 
         <h5>Mary says:</h5>
-        <label>Hint: two words, an oxymoron, some freaks seek the 1<sup>st</sup>, the 2<sup>nd</sup> is the 5<sup>th</sup> horseman of the apocalypse.</label>
+        <label>Hint: two words, an oxymoron, the 1<sup>st</sup> could be a robot with a remote, the 2<sup>nd</sup> is the 5<sup>th</sup> horseman of the apocalypse.</label>
         <div class="row">
           <div class="medium-6 columns">
             <input class="f2" id="f2-a" type="text" placeholder="10 letters" />
@@ -119,7 +119,7 @@ Get out of my source code!
         </div>
 
         <h5>Velma says:</h5>
-        <label>Hint: it's cyclical</label>
+        <label>Hint: it's cyclical.</label>
         <input id="f4" type="text" placeholder="7 letters" />
         <div class="hide">
           <img class="float-left" src="https://media.giphy.com/media/z1FzPhvrIZXTa/giphy.gif" alt="" />
@@ -130,7 +130,7 @@ Get out of my source code!
         </div>
 
         <h5>Mark says:</h5>
-        <label>Hint: could be blue suede</label>
+        <label>Hint: these could be blue suede.</label>
         <input id="f5" type="text" placeholder="5 letters" />
         <div class="hide">
           <img class="float-left" src="https://media.giphy.com/media/kGABMRdGVWKgE/giphy.gif" alt="" />
@@ -141,12 +141,59 @@ Get out of my source code!
         </div>
 
         <h5>Kate says:</h5>
-        <label>Hint: Palpatine to Anakin</label>
+        <label>Hint: Palpatine to Anakin.</label>
         <input id="f6" type="text" placeholder="7 letters" />
         <div class="hide">
           <img class="float-left" src="https://media.giphy.com/media/6ySFKd72MyV4Q/giphy.gif" alt="" />
           <p>
             Thank you for being my biggest advocate and teaching me all I know about Comms! You will be missed!
+          </p>
+          <hr>
+        </div>
+
+        <h5>Jessica says:</h5>
+        <label>Hint: two words, art &amp; science, you can use charcoal for the 1<sup>st</sup>, captains love the 2<sup>nd</sup>(s).</label>
+        <div class="row">
+          <div class="medium-6 columns">
+            <input class="f7" id="f7-a" type="text" placeholder="7 letters" />
+          </div>
+          <div class="medium-6 columns">
+            <input class="f7" id="f7-b" type="text" placeholder="6 letters" />
+          </div>
+        </div>
+        <div class="f7-hide hide">
+          <p>
+            <img class="float-left" src="https://media.giphy.com/media/q22we7VeSSxnW/giphy.gif" alt="" />
+            Long text here.
+          </p>
+          <hr>
+        </div>
+
+        <h5>Linda says:</h5>
+        <label>Hint: turns out, Stalin was wrong.</label>
+        <input id="f8" type="text" placeholder="7 letters" />
+        <div class="hide">
+          <img class="float-left" src="https://media.giphy.com/media/tkOnd90Y7fSSs/giphy.gif" alt="" />
+          <p>
+            Long text here.
+          </p>
+          <hr>
+        </div>
+
+        <h5>Clinton says:</h5>
+        <label>Hint: two words, 1<sup>st</sup> is a big word for smart, the 2<sup>nd</sup> is the result of the muses' gift.</label>
+        <div class="row">
+          <div class="medium-6 columns">
+            <input class="f9" id="f9-a" type="text" placeholder="6 letters" />
+          </div>
+          <div class="medium-6 columns">
+            <input class="f9" id="f9-b" type="text" placeholder="10 letters" />
+          </div>
+        </div>
+        <div class="f9-hide hide">
+          <p>
+            <img class="float-left" src="https://media.giphy.com/media/PPYimW5T73L6o/giphy.gif" alt="" />
+            Long text here.
           </p>
           <hr>
         </div>
@@ -202,6 +249,9 @@ Get out of my source code!
           $("#f6").on("change paste keyup", function() {
              checkAgainst($(this), 'mentor');
           });
+          $("#f8").on("change paste keyup", function() {
+             checkAgainst($(this), 'quality');
+          });
 
           $(".f2").on("change paste keyup", function() {
             if (($("#f2-a").val().toLowerCase()==="controlled") && ($("#f2-b").val().toLowerCase()==="chaos")) {
@@ -209,6 +259,24 @@ Get out of my source code!
              checkIfAllCorrect()
             } else {
              $(".f2-hide").addClass('hide');
+            }
+          });
+
+          $(".f7").on("change paste keyup", function() {
+            if (($("#f7-a").val().toLowerCase()==="drawing") && ($("#f7-b").val().toLowerCase()==="charts")) {
+             $(".f7-hide").removeClass('hide');
+             checkIfAllCorrect()
+            } else {
+             $(".f7-hide").addClass('hide');
+            }
+          });
+
+          $(".f9").on("change paste keyup", function() {
+            if (($("#f9-a").val().toLowerCase()==="astute") && ($("#f9-b").val().toLowerCase()==="creativity")) {
+             $(".f9-hide").removeClass('hide');
+             checkIfAllCorrect()
+            } else {
+             $(".f9-hide").addClass('hide');
             }
           });
 
