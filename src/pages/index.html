@@ -173,9 +173,9 @@ Get out of my source code!
         <label>Hint: turns out, Stalin was wrong.</label>
         <input id="f8" type="text" placeholder="7 letters" />
         <div class="hide">
-          <img class="float-left" src="https://media.giphy.com/media/tkOnd90Y7fSSs/giphy.gif" alt="" />
+          <img class="float-left" src="https://media.giphy.com/media/bPSStBOYixPLW/giphy.gif" alt="" />
           <p>
-            Long text here.
+            Brad, you always brought a quantity of quality work. I will miss you.
           </p>
           <hr>
         </div>
@@ -194,6 +194,24 @@ Get out of my source code!
           <p>
             <img class="float-left" src="https://media.giphy.com/media/PPYimW5T73L6o/giphy.gif" alt="" />
             Long text here.
+          </p>
+          <hr>
+        </div>
+
+        <h5>Sabrina says:</h5>
+        <label>Hint: two words, the opposite of true olds.</label>
+        <div class="row">
+          <div class="medium-6 columns">
+            <input class="f10" id="f10-a" type="text" placeholder="4 letters" />
+          </div>
+          <div class="medium-6 columns">
+            <input class="f10" id="f10-b" type="text" placeholder="4 letters" />
+          </div>
+        </div>
+        <div class="f10-hide hide">
+          <p>
+            <img class="float-left" src="https://media.giphy.com/media/26BGKvUgUqfJbq57W/giphy.gif" alt="" />
+            It's been great working with you. You were truly the brains behind all the data. All the best in your next adventure. Stay in touch!
           </p>
           <hr>
         </div>
@@ -277,6 +295,15 @@ Get out of my source code!
              checkIfAllCorrect()
             } else {
              $(".f9-hide").addClass('hide');
+            }
+          });
+
+          $(".f10").on("change paste keyup", function() {
+            if (($("#f10-a").val().toLowerCase()==="fake") && ($("#f10-b").val().toLowerCase()==="news")) {
+             $(".f10-hide").removeClass('hide');
+             checkIfAllCorrect()
+            } else {
+             $(".f10-hide").addClass('hide');
             }
           });
 
