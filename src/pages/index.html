@@ -1,58 +1,21 @@
-<!--
 
-
-
-
-
-
-
-
-
-
-
-C'MON REALLY?
-Get out of my source code!
-
-
-
-
-
-
-
-
-
-
-
-
-
--->
-<!doctype html>
-<html class="no-js" lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brad's E-Card</title>
-    <link rel="stylesheet" href="assets/css/app.css">
-    <style>
-      body {
-        background-color: #EFEFEF;
-      }
-      .callout {
-        background-color: #CAEBF2;
-      }
-      h5 {
-        display: none;
-      }
-      img {
-        max-width: 100%;
-        height: auto;
-        margin-right: 15px;
-        margin-bottom: 15px;
-      }
-    </style>
-  </head>
-  <body>
+  <style>
+    body {
+      background-color: #EFEFEF;
+    }
+    .callout {
+      background-color: #CAEBF2;
+    }
+    h5 {
+      display: none;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      margin-right: 15px;
+      margin-bottom: 15px;
+    }
+  </style>
 
     <!-- <div class="row">
       <div class="large-12 columns">
@@ -79,7 +42,7 @@ Get out of my source code!
       <div class="large-8 columns">
 
         <h5>Rachid says:</h5>
-        <label>Hint: a light bulb that's always on.</label>
+        <label>Hint: a light bulb that's burning brightly.</label>
         <input id="f1" type="text" placeholder="9 letters" />
         <div class="hide">
           <img class="float-left" src="https://media.giphy.com/media/26BRBKqUiq586bRVm/giphy.gif" alt="" />
@@ -199,7 +162,7 @@ Get out of my source code!
         </div>
 
         <h5>Sabrina says:</h5>
-        <label>Hint: two words, the opposite of true olds.</label>
+        <label>Hint: two words, Cable News Networks.</label>
         <div class="row">
           <div class="medium-6 columns">
             <input class="f10" id="f10-a" type="text" placeholder="4 letters" />
@@ -212,6 +175,52 @@ Get out of my source code!
           <p>
             <img class="float-left" src="https://media.giphy.com/media/26BGKvUgUqfJbq57W/giphy.gif" alt="" />
             It's been great working with you. You were truly the brains behind all the data. All the best in your next adventure. Stay in touch!
+          </p>
+          <hr>
+        </div>
+
+        <h5>Eric says:</h5>
+        <label>Hint: !WRONG + '?'</label>
+        <input id="f11" type="text" placeholder="6 letters" />
+        <div class="hide">
+          <img class="float-left" src="https://media.giphy.com/media/uy9DYaUbclWi4/giphy.gif" alt="" />
+          <p>
+            Brad,<br><br>
+            It’s been a great run&hellip; It’s been fun working with you the last 6 or so years.<br><br>
+            Here’s wishing you continued success. Who knows we could wind up working together again :)
+          </p>
+          <hr>
+        </div>
+
+        <h5>Zee says:</h5>
+        <label>Hint: big word for big, often used with the word 'occasion'.</label>
+        <input id="f12" type="text" placeholder="9 letters" />
+        <div class="hide">
+          <img class="float-left" src="https://media.giphy.com/media/LpLd2NGvpaiys/giphy.gif" alt="" />
+          <p>
+            I have experienced something momentous while your were at API, may your next journey be the same.
+          </p>
+          <hr>
+        </div>
+
+        <h5>Reid says:</h5>
+        <label>Hint: big word for smart, your only hope is to seek a sage.</label>
+        <input id="f13" type="text" placeholder="9 letters" />
+        <div class="hide">
+          <img class="float-left" src="https://media.giphy.com/media/7mphKnQl4gUz6/giphy.gif" alt="" />
+          <p>
+            Since day one – we started at API on the same day – it was clear that Brad is one of the most astute, acute, intelligent, quick and brilliant people I will have had the pleasure to work with. We’ve been better off having Brad on the team. Brad is the working embodiment of sagacious.
+          </p>
+          <hr>
+        </div>
+
+        <h5>Ed says:</h5>
+        <label>Hint: you are the master of this.</label>
+        <input id="f14" type="text" placeholder="6 letters" />
+        <div class="hide">
+          <img class="float-left" src="https://media.giphy.com/media/aLTFHi2aowjJe/giphy.gif" alt="" />
+          <p>
+            It's been a pleasure working with you!  You will be missed. Best of luck on your next endeavor.
           </p>
           <hr>
         </div>
@@ -270,6 +279,18 @@ Get out of my source code!
           $("#f8").on("change paste keyup", function() {
              checkAgainst($(this), 'quality');
           });
+          $("#f11").on("change paste keyup", function() {
+             checkAgainst($(this), 'right?');
+          });
+          $("#f12").on("change paste keyup", function() {
+             checkAgainst($(this), 'momentous');
+          });
+          $("#f13").on("change paste keyup", function() {
+             checkAgainst($(this), 'sagacious');
+          });
+          $("#f14").on("change paste keyup", function() {
+             checkAgainst($(this), 'domain');
+          });
 
           $(".f2").on("change paste keyup", function() {
             if (($("#f2-a").val().toLowerCase()==="controlled") && ($("#f2-b").val().toLowerCase()==="chaos")) {
@@ -311,5 +332,3 @@ Get out of my source code!
 
       });
     </script>
-  </body>
-</html>
