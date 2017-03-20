@@ -8,12 +8,33 @@
     }
     h5 {
       display: none;
+      color:red;
     }
     img {
       max-width: 100%;
       height: auto;
       margin-right: 15px;
       margin-bottom: 15px;
+    }
+    .pips {
+      margin: -15px 0px 15px;
+      padding-left: 3px;
+    }
+    .pip {
+      display: inline-block;
+      margin-right: 3px;
+      border: solid 1px #666666;
+      height: 12px;
+      width: 12px;
+      border-radius: 6px;
+    }
+    .pip.success {
+      border: solid 1px green;
+      background-color: green;
+    }
+    .pip.warning {
+      border: solid 1px red;
+      background-color: red;
     }
   </style>
 
@@ -33,7 +54,7 @@
           Call it Karma?</p>
           <h2>The Rules</h2>
           <p>Guess a word using the provided hint and watch words of wit and wisdom appear.</p>
-          <p>Get all the words right and you'll find out who said what.</p>
+          <p>Get <em>all</em> the words right and you'll find out <em>who</em> said <em>what</em>.</p>
         </div>
       </div>
     </div>
@@ -41,10 +62,21 @@
     <div class="row">
       <div class="large-8 columns">
 
-        <h5>Rachid says:</h5>
+        <h5 id="start">Rachid says:</h5>
         <label>Hint: a light bulb that's burning brightly.</label>
         <input id="f1" type="text" placeholder="9 letters" />
-        <div class="hide">
+        <div class="pips">
+          <div class="pip"></div>
+          <div class="pip"></div>
+          <div class="pip"></div>
+          <div class="pip"></div>
+          <div class="pip"></div>
+          <div class="pip"></div>
+          <div class="pip"></div>
+          <div class="pip"></div>
+          <div class="pip"></div>
+        </div>
+        <div class="hide message">
           <img class="float-left" src="https://media.giphy.com/media/26BRBKqUiq586bRVm/giphy.gif" alt="" />
           <p>
             Thank you for the fun projects, the mentoring and most importantly the trust you've always shown me. Good luck on your next adventure.
@@ -57,26 +89,52 @@
         <div class="row">
           <div class="medium-6 columns">
             <input class="f2" id="f2-a" type="text" placeholder="10 letters" />
+            <div class="pips">
+              <div class="pip"></div>
+              <div class="pip"></div>
+              <div class="pip"></div>
+              <div class="pip"></div>
+              <div class="pip"></div>
+              <div class="pip"></div>
+              <div class="pip"></div>
+              <div class="pip"></div>
+              <div class="pip"></div>
+              <div class="pip"></div>
+            </div>
           </div>
           <div class="medium-6 columns">
             <input class="f2" id="f2-b" type="text" placeholder="5 letters" />
+            <div class="pips">
+              <div class="pip"></div>
+              <div class="pip"></div>
+              <div class="pip"></div>
+              <div class="pip"></div>
+              <div class="pip"></div>
+            </div>
           </div>
         </div>
-        <div class="f2-hide hide">
+        <div class="f2-hide hide message">
           <p>
             <img class="float-left" src="https://media.giphy.com/media/joV1k1sNOT5xC/giphy.gif" alt="" />
-            Long text here.
+            Brad, thank you for hiring me! And for the organized chaos over the years. You always kept me on my toes and encouraged me to think outside the box. Thank you and best wishes on your new adventure.
           </p>
           <hr>
         </div>
 
         <h5>Jude says:</h5>
-        <label>Hint: a delicacy for zombies.</label>
+        <label>Hint: 01100010 01110010 01100001 01101001 01101110</label>
         <input id="f3" type="text" placeholder="5 letters" />
-        <div class="hide">
+        <div class="pips">
+          <div class="pip"></div>
+          <div class="pip"></div>
+          <div class="pip"></div>
+          <div class="pip"></div>
+          <div class="pip"></div>
+        </div>
+        <div class="hide message">
           <img class="float-left" src="https://media.giphy.com/media/3rgXBARL7tEj1NdC0w/giphy.gif" alt="" />
           <p>
-            Long text here.
+            Gratefully appreciative for the lessons learned at the steady hand of a seasoned mentor. Best wishes!
           </p>
           <hr>
         </div>
@@ -84,7 +142,16 @@
         <h5>Velma says:</h5>
         <label>Hint: it's cyclical.</label>
         <input id="f4" type="text" placeholder="7 letters" />
-        <div class="hide">
+        <div class="pips">
+          <div class="pip"></div>
+          <div class="pip"></div>
+          <div class="pip"></div>
+          <div class="pip"></div>
+          <div class="pip"></div>
+          <div class="pip"></div>
+          <div class="pip"></div>
+        </div>
+        <div class="hide message">
           <img class="float-left" src="https://media.giphy.com/media/z1FzPhvrIZXTa/giphy.gif" alt="" />
           <p>
             &hellip;as in lunch at Jimmy John's&hellip; lol. Wishing you all the best Brad! Let us know when "TBD" is no longer a "TBD". Take care!
@@ -95,7 +162,14 @@
         <h5>Mark says:</h5>
         <label>Hint: these could be blue suede.</label>
         <input id="f5" type="text" placeholder="5 letters" />
-        <div class="hide">
+        <div class="pips">
+          <div class="pip"></div>
+          <div class="pip"></div>
+          <div class="pip"></div>
+          <div class="pip"></div>
+          <div class="pip"></div>
+        </div>
+        <div class="hide message">
           <img class="float-left" src="https://media.giphy.com/media/kGABMRdGVWKgE/giphy.gif" alt="" />
           <p>
             As in, we're not in the business of selling shoes!
@@ -105,8 +179,16 @@
 
         <h5>Kate says:</h5>
         <label>Hint: Palpatine to Anakin.</label>
-        <input id="f6" type="text" placeholder="7 letters" />
-        <div class="hide">
+        <input id="f6" type="text" placeholder="6 letters" />
+        <div class="pips">
+          <div class="pip"></div>
+          <div class="pip"></div>
+          <div class="pip"></div>
+          <div class="pip"></div>
+          <div class="pip"></div>
+          <div class="pip"></div>
+        </div>
+        <div class="hide message">
           <img class="float-left" src="https://media.giphy.com/media/6ySFKd72MyV4Q/giphy.gif" alt="" />
           <p>
             Thank you for being my biggest advocate and teaching me all I know about Comms! You will be missed!
@@ -119,15 +201,32 @@
         <div class="row">
           <div class="medium-6 columns">
             <input class="f7" id="f7-a" type="text" placeholder="7 letters" />
+            <div class="pips">
+              <div class="pip"></div>
+              <div class="pip"></div>
+              <div class="pip"></div>
+              <div class="pip"></div>
+              <div class="pip"></div>
+              <div class="pip"></div>
+              <div class="pip"></div>
+            </div>
           </div>
           <div class="medium-6 columns">
             <input class="f7" id="f7-b" type="text" placeholder="6 letters" />
+            <div class="pips">
+              <div class="pip"></div>
+              <div class="pip"></div>
+              <div class="pip"></div>
+              <div class="pip"></div>
+              <div class="pip"></div>
+              <div class="pip"></div>
+            </div>
           </div>
         </div>
-        <div class="f7-hide hide">
+        <div class="f7-hide hide message">
           <p>
             <img class="float-left" src="https://media.giphy.com/media/q22we7VeSSxnW/giphy.gif" alt="" />
-            Long text here.
+            Thanks again for teaching us all so much in the many charts you've drawn over the years. Everyone in town knows about the influential middle now.
           </p>
           <hr>
         </div>
@@ -135,7 +234,16 @@
         <h5>Linda says:</h5>
         <label>Hint: turns out, Stalin was wrong.</label>
         <input id="f8" type="text" placeholder="7 letters" />
-        <div class="hide">
+        <div class="pips">
+          <div class="pip"></div>
+          <div class="pip"></div>
+          <div class="pip"></div>
+          <div class="pip"></div>
+          <div class="pip"></div>
+          <div class="pip"></div>
+          <div class="pip"></div>
+        </div>
+        <div class="hide message">
           <img class="float-left" src="https://media.giphy.com/media/bPSStBOYixPLW/giphy.gif" alt="" />
           <p>
             Brad, you always brought a quantity of quality work. I will miss you.
@@ -144,19 +252,39 @@
         </div>
 
         <h5>Clinton says:</h5>
-        <label>Hint: two words, 1<sup>st</sup> is a big word for smart, the 2<sup>nd</sup> is the result of the muses' gift.</label>
+        <label>Hint: two words, 1<sup>st</sup> is a big word for smart, sounds like pass-flute, the 2<sup>nd</sup> is the result of the muses' gift.</label>
         <div class="row">
           <div class="medium-6 columns">
             <input class="f9" id="f9-a" type="text" placeholder="6 letters" />
+            <div class="pips">
+              <div class="pip"></div>
+              <div class="pip"></div>
+              <div class="pip"></div>
+              <div class="pip"></div>
+              <div class="pip"></div>
+              <div class="pip"></div>
+            </div>
           </div>
           <div class="medium-6 columns">
             <input class="f9" id="f9-b" type="text" placeholder="10 letters" />
+            <div class="pips">
+              <div class="pip"></div>
+              <div class="pip"></div>
+              <div class="pip"></div>
+              <div class="pip"></div>
+              <div class="pip"></div>
+              <div class="pip"></div>
+              <div class="pip"></div>
+              <div class="pip"></div>
+              <div class="pip"></div>
+              <div class="pip"></div>
+            </div>
           </div>
         </div>
-        <div class="f9-hide hide">
+        <div class="f9-hide hide message">
           <p>
             <img class="float-left" src="https://media.giphy.com/media/PPYimW5T73L6o/giphy.gif" alt="" />
-            Long text here.
+            Best of luck, it has been an honor working with you.
           </p>
           <hr>
         </div>
@@ -166,12 +294,24 @@
         <div class="row">
           <div class="medium-6 columns">
             <input class="f10" id="f10-a" type="text" placeholder="4 letters" />
+            <div class="pips">
+              <div class="pip"></div>
+              <div class="pip"></div>
+              <div class="pip"></div>
+              <div class="pip"></div>
+            </div>
           </div>
           <div class="medium-6 columns">
             <input class="f10" id="f10-b" type="text" placeholder="4 letters" />
+            <div class="pips">
+              <div class="pip"></div>
+              <div class="pip"></div>
+              <div class="pip"></div>
+              <div class="pip"></div>
+            </div>
           </div>
         </div>
-        <div class="f10-hide hide">
+        <div class="f10-hide hide message">
           <p>
             <img class="float-left" src="https://media.giphy.com/media/26BGKvUgUqfJbq57W/giphy.gif" alt="" />
             It's been great working with you. You were truly the brains behind all the data. All the best in your next adventure. Stay in touch!
@@ -182,12 +322,18 @@
         <h5>Eric says:</h5>
         <label>Hint: !WRONG + '?'</label>
         <input id="f11" type="text" placeholder="6 letters" />
-        <div class="hide">
+        <div class="pips">
+          <div class="pip"></div>
+          <div class="pip"></div>
+          <div class="pip"></div>
+          <div class="pip"></div>
+          <div class="pip"></div>
+          <div class="pip"></div>
+        </div>
+        <div class="hide message">
           <img class="float-left" src="https://media.giphy.com/media/uy9DYaUbclWi4/giphy.gif" alt="" />
           <p>
-            Brad,<br><br>
-            It’s been a great run&hellip; It’s been fun working with you the last 6 or so years.<br><br>
-            Here’s wishing you continued success. Who knows we could wind up working together again :)
+            Brad, it’s been a great run&hellip; It’s been fun working with you the last 6 or so years. Here’s wishing you continued success. Who knows we could wind up working together again :)
           </p>
           <hr>
         </div>
@@ -195,7 +341,18 @@
         <h5>Zee says:</h5>
         <label>Hint: big word for big, often used with the word 'occasion'.</label>
         <input id="f12" type="text" placeholder="9 letters" />
-        <div class="hide">
+        <div class="pips">
+          <div class="pip"></div>
+          <div class="pip"></div>
+          <div class="pip"></div>
+          <div class="pip"></div>
+          <div class="pip"></div>
+          <div class="pip"></div>
+          <div class="pip"></div>
+          <div class="pip"></div>
+          <div class="pip"></div>
+        </div>
+        <div class="hide message">
           <img class="float-left" src="https://media.giphy.com/media/LpLd2NGvpaiys/giphy.gif" alt="" />
           <p>
             I have experienced something momentous while your were at API, may your next journey be the same.
@@ -206,7 +363,18 @@
         <h5>Reid says:</h5>
         <label>Hint: big word for smart, your only hope is to seek a sage.</label>
         <input id="f13" type="text" placeholder="9 letters" />
-        <div class="hide">
+        <div class="pips">
+          <div class="pip"></div>
+          <div class="pip"></div>
+          <div class="pip"></div>
+          <div class="pip"></div>
+          <div class="pip"></div>
+          <div class="pip"></div>
+          <div class="pip"></div>
+          <div class="pip"></div>
+          <div class="pip"></div>
+        </div>
+        <div class="hide message">
           <img class="float-left" src="https://media.giphy.com/media/7mphKnQl4gUz6/giphy.gif" alt="" />
           <p>
             Since day one – we started at API on the same day – it was clear that Brad is one of the most astute, acute, intelligent, quick and brilliant people I will have had the pleasure to work with. We’ve been better off having Brad on the team. Brad is the working embodiment of sagacious.
@@ -217,10 +385,137 @@
         <h5>Ed says:</h5>
         <label>Hint: you are the master of this.</label>
         <input id="f14" type="text" placeholder="6 letters" />
-        <div class="hide">
+        <div class="pips">
+          <div class="pip"></div>
+          <div class="pip"></div>
+          <div class="pip"></div>
+          <div class="pip"></div>
+          <div class="pip"></div>
+          <div class="pip"></div>
+        </div>
+        <div class="hide message">
           <img class="float-left" src="https://media.giphy.com/media/aLTFHi2aowjJe/giphy.gif" alt="" />
           <p>
             It's been a pleasure working with you!  You will be missed. Best of luck on your next endeavor.
+          </p>
+          <hr>
+        </div>
+
+        <h5>Mike (Tadeo) says:</h5>
+        <label>Hint: Like some TVs, dishwashers, blinds&hellip;</label>
+        <input id="f15" type="text" placeholder="5 letters" />
+        <div class="pips">
+          <div class="pip"></div>
+          <div class="pip"></div>
+          <div class="pip"></div>
+          <div class="pip"></div>
+          <div class="pip"></div>
+        </div>
+        <div class="hide message">
+          <img class="float-left" src="https://media.giphy.com/media/ohdY5OaQmUmVW/giphy.gif" alt="" />
+          <p>
+            Thanks for always being able to break down EIA numbers so they can be understood! Best of luck and hope we work together in the future.
+          </p>
+          <hr>
+        </div>
+
+        <h5>Turk says:</h5>
+        <label>Hint: Grace is __</label>
+        <input id="f16" type="text" placeholder="7 letters" />
+        <div class="pips">
+          <div class="pip"></div>
+          <div class="pip"></div>
+          <div class="pip"></div>
+          <div class="pip"></div>
+          <div class="pip"></div>
+          <div class="pip"></div>
+          <div class="pip"></div>
+        </div>
+        <div class="hide message">
+          <img class="float-left" src="assets/img/5_0.jpg" alt="" />
+          <p>
+            It's been great working with you over the years. Best of luck in all that comes next.
+          </p>
+          <hr>
+        </div>
+
+        <h5>Jocelyn K says:</h5>
+        <label>Hint: like a brother Grimm.</label>
+        <input id="f17" type="text" placeholder="11 letters" />
+        <div class="pips">
+          <div class="pip"></div>
+          <div class="pip"></div>
+          <div class="pip"></div>
+          <div class="pip"></div>
+          <div class="pip"></div>
+          <div class="pip"></div>
+          <div class="pip"></div>
+          <div class="pip"></div>
+          <div class="pip"></div>
+          <div class="pip"></div>
+          <div class="pip"></div>
+        </div>
+        <div class="hide message">
+          <img class="float-left" src="https://media.giphy.com/media/pvO8ugi72HKww/giphy.gif" alt="" />
+          <p>
+            Brad, thanks for all the advice and guidance over the years. You've been a great mentor. I'm going to miss your creativity, your love for data analysis, your drawings, and your stories - you always have a story for every situation. I wish you all the best in your next endeavor and hope we can stay in touch.
+          </p>
+          <hr>
+        </div>
+
+        <h5>Jimmy says:</h5>
+        <label>Hint: like the cat that died.</label>
+        <input id="f18" type="text" placeholder="7 letters" />
+        <div class="pips">
+          <div class="pip"></div>
+          <div class="pip"></div>
+          <div class="pip"></div>
+          <div class="pip"></div>
+          <div class="pip"></div>
+          <div class="pip"></div>
+          <div class="pip"></div>
+        </div>
+        <div class="hide message">
+          <img class="float-left" src="https://media.giphy.com/media/6gEy5E4YI2N4k/giphy.gif" alt="" />
+          <p>
+            Enjoy the road ahead. It's going to be fun!
+          </p>
+          <hr>
+        </div>
+
+        <h5>Jocelyn R says:</h5>
+        <label>Hint: two words, the 1<sup>st</sup> is the only extant member of the Hominina tribe, the 2<sup>nd</sup>'s ancestor is an abacus.</label>
+        <div class="row">
+          <div class="medium-6 columns">
+            <input class="f19" id="f19-a" type="text" placeholder="5 letters" />
+            <div class="pips">
+              <div class="pip"></div>
+              <div class="pip"></div>
+              <div class="pip"></div>
+              <div class="pip"></div>
+              <div class="pip"></div>
+            </div>
+          </div>
+          <div class="medium-6 columns">
+            <input class="f19" id="f19-b" type="text" placeholder="10 letters" />
+            <div class="pips">
+              <div class="pip"></div>
+              <div class="pip"></div>
+              <div class="pip"></div>
+              <div class="pip"></div>
+              <div class="pip"></div>
+              <div class="pip"></div>
+              <div class="pip"></div>
+              <div class="pip"></div>
+              <div class="pip"></div>
+              <div class="pip"></div>
+            </div>
+          </div>
+        </div>
+        <div class="f19-hide hide message">
+          <p>
+            <img class="float-left" src="https://media.giphy.com/media/l41YtZOb9EUABnuqA/giphy.gif" alt="" />
+            Thanks for all your help with SOAE, checking my math and for always knowing the right data or graphic to use for any given topic. I've enjoyed working with you.
           </p>
           <hr>
         </div>
@@ -237,29 +532,93 @@
     </footer>
 
     <script
-      src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
-      integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc="
-      crossorigin="anonymous"></script>
+  src="https://code.jquery.com/jquery-3.2.0.min.js"
+  integrity="sha256-JAW99MJVpJBGcbzEuXk4Az05s/XyDdBomFqNlM3ic+I="
+  crossorigin="anonymous"></script>
+
     <script>
       $(document).ready(function() {
 
+        (function() {
+          var hidden = "hidden";
+
+          // Standards:
+          if (hidden in document)
+            document.addEventListener("visibilitychange", onchange);
+          else if ((hidden = "mozHidden") in document)
+            document.addEventListener("mozvisibilitychange", onchange);
+          else if ((hidden = "webkitHidden") in document)
+            document.addEventListener("webkitvisibilitychange", onchange);
+          else if ((hidden = "msHidden") in document)
+            document.addEventListener("msvisibilitychange", onchange);
+          // IE 9 and lower:
+          else if ("onfocusin" in document)
+            document.onfocusin = document.onfocusout = onchange;
+          // All others:
+          else
+            window.onpageshow = window.onpagehide
+            = window.onfocus = window.onblur = onchange;
+
+          function onchange (evt) {
+            var v = "visible", h = "hidden",
+                evtMap = {
+                  focus:v, focusin:v, pageshow:v, blur:h, focusout:h, pagehide:h
+                };
+
+            evt = evt || window.event;
+            if (evt.type in evtMap)
+              document.body.className = evtMap[evt.type];
+            else
+              document.body.className = this[hidden] ? "hidden" : "visible";
+
+            if (document.body.className = this[hidden]) {
+              $("link[rel*='shortcut icon']").attr("href", "assets/img/favicon2.ico");
+              document.title = "so wrong...";
+            } else {
+              $("link[rel*='shortcut icon']").attr("href", "assets/img/favicon.ico");
+              document.title = "Brad's E-card";
+            }
+          }
+          })();
+
+
+
           function checkAgainst(thisInput, theWord) {
+            pipControll(thisInput, theWord);
             if (thisInput.val().toLowerCase()===theWord) {
-             thisInput.next('div').removeClass('hide');
+             thisInput.nextAll('.message:first').removeClass('hide');
              checkIfAllCorrect();
             } else {
-             thisInput.next('div').addClass('hide');
+             thisInput.nextAll('.message:first').addClass('hide');
+            }
+          }
+
+          function pipControll(thisInput, theWord) {
+            var currentPips = thisInput.next('.pips').find('.pip');
+            var inputValueSoFar = thisInput.val().toLowerCase();
+            var answerArray = theWord.split("");
+            var i;
+            currentPips.removeClass('warning');
+            currentPips.removeClass('success');
+            for (i = 0; i < inputValueSoFar.length; ++i) {
+              if (inputValueSoFar[i]===answerArray[i]) {
+                currentPips.eq(i).addClass('success');
+                currentPips.eq(i).removeClass('warning');
+              } else {
+                currentPips.eq(i).addClass('warning');
+                currentPips.eq(i).removeClass('success');
+              }
             }
           }
 
           function checkIfAllCorrect() {
             if ($(".hide")[0]){
               $("h5").css('display', 'none');
-
             } else {
-                $("h5").css('display', 'block');
+              $("h5").css('display', 'block');
             }
           }
+
 
           $("#f1").on("change paste keyup", function() {
              checkAgainst($(this), 'brilliant');
@@ -291,40 +650,71 @@
           $("#f14").on("change paste keyup", function() {
              checkAgainst($(this), 'domain');
           });
+          $("#f15").on("change paste keyup", function() {
+             checkAgainst($(this), 'smart');
+          });
+          $("#f16").on("change paste keyup", function() {
+             checkAgainst($(this), 'amazing');
+          });
+          $("#f17").on("change paste keyup", function() {
+             checkAgainst($(this), 'storyteller');
+          });
+          $("#f18").on("change paste keyup", function() {
+             checkAgainst($(this), 'curious');
+          });
 
           $(".f2").on("change paste keyup", function() {
+            pipControll($('#f2-a'), 'controlled');
+            pipControll($('#f2-b'), 'chaos');
             if (($("#f2-a").val().toLowerCase()==="controlled") && ($("#f2-b").val().toLowerCase()==="chaos")) {
              $(".f2-hide").removeClass('hide');
-             checkIfAllCorrect()
+             checkIfAllCorrect();
             } else {
              $(".f2-hide").addClass('hide');
             }
           });
 
           $(".f7").on("change paste keyup", function() {
+            pipControll($('#f7-a'), 'drawing');
+            pipControll($('#f7-b'), 'charts');
             if (($("#f7-a").val().toLowerCase()==="drawing") && ($("#f7-b").val().toLowerCase()==="charts")) {
              $(".f7-hide").removeClass('hide');
-             checkIfAllCorrect()
+             checkIfAllCorrect();
             } else {
              $(".f7-hide").addClass('hide');
             }
           });
 
           $(".f9").on("change paste keyup", function() {
+            pipControll($('#f9-a'), 'astute');
+            pipControll($('#f9-b'), 'creativity');
             if (($("#f9-a").val().toLowerCase()==="astute") && ($("#f9-b").val().toLowerCase()==="creativity")) {
              $(".f9-hide").removeClass('hide');
-             checkIfAllCorrect()
+             checkIfAllCorrect();
             } else {
              $(".f9-hide").addClass('hide');
             }
           });
 
           $(".f10").on("change paste keyup", function() {
+            pipControll($('#f10-a'), 'fake');
+            pipControll($('#f10-b'), 'news');
             if (($("#f10-a").val().toLowerCase()==="fake") && ($("#f10-b").val().toLowerCase()==="news")) {
              $(".f10-hide").removeClass('hide');
-             checkIfAllCorrect()
+             checkIfAllCorrect();
             } else {
              $(".f10-hide").addClass('hide');
+            }
+          });
+
+          $(".f19").on("change paste keyup", function() {
+            pipControll($('#f19-a'), 'human');
+            pipControll($('#f19-b'), 'calculator');
+            if (($("#f19-a").val().toLowerCase()==="human") && ($("#f19-b").val().toLowerCase()==="calculator")) {
+             $(".f19-hide").removeClass('hide');
+             checkIfAllCorrect();
+            } else {
+             $(".f19-hide").addClass('hide');
             }
           });
 
